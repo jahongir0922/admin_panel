@@ -1,0 +1,240 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box !important;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/**
+*
+* Testing
+*
+**/
+#root {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  background-color: #1e1e1e;
+}
+
+.container {
+  border: 1px solid red;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+@media (max-width: 1366px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  gap: 15px;
+  padding: 25px;
+  justify-content: space-between;
+  background-color: #212121;
+}
+.card > img {
+  width: 32px;
+}
+.card h1 {
+  color: #ffffff;
+  font-size: 16px;
+}
+.card p {
+  color: #babac2;
+  font-size: 14px;
+}
+.card span {
+  color: #babac2;
+  font-size: 30px;
+}
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card > div > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+.card > div > div img {
+  width: 46px;
+}
+
+.green {
+  color: #20ce70 !important;
+}
+
+.warning {
+  color: #ec7a2a !important;
+}
+
+.cancel {
+  color: #ef5858 !important;
+}
+
+.globus_card {
+  padding: 25px;
+}
+.globus_card h1 {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.card2 {
+  display: grid;
+  grid-template-columns: repeat(2, 70% 30%);
+  gap: 15px;
+  padding: 25px;
+  align-items: center;
+}
+.card2 h1 {
+  color: #ffffff;
+  font-size: 16px;
+}
+.card2 p {
+  color: #babac2;
+  font-size: 14px;
+}
+.card2 span {
+  color: #babac2;
+  font-size: 30px;
+}
+
+.grid_line1 {
+  border: 1px solid red;
+  display: grid;
+  gap: 1%;
+  width: 100%;
+  grid-template-columns: repeat(3, 24% 49% 24%);
+}
+
+.grid_line2 {
+  border: 1px solid red;
+  display: grid;
+  gap: 1%;
+  justify-content: space-between;
+  width: 100%;
+  grid-template-columns: repeat(4, 24%);
+}
+
+.left_border {
+  border-left: 1px solid #333333 !important;
+}
+
+.grid_line3 {
+  display: grid;
+  gap: 1%;
+  width: 100%;
+  grid-template-columns: repeat(3, 33%);
+  text-align: center;
+}
+
+.globus {
+  position: relative;
+}
+.globus .g_item {
+  color: #20ce70;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.globus img {
+  width: 150px;
+}
+.globus .axis {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #20ce70;
+  border-radius: 50%;
+}
+.globus .axis1 {
+  transform: translate3d(-50%, -50%, 0) rotateX(65deg) rotateY(55deg);
+  animation-name: anim_axis1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.globus .axis2 {
+  transform: translate3d(-50%, -50%, 0) rotateX(-75deg) rotateY(40deg);
+  animation-name: anim_axis2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.globus .axis3 {
+  transform: translate3d(-50%, -50%, 0) rotateX(75deg) rotateY(165deg) rotateZ(50deg);
+  animation-name: anim_axis3;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anim_axis1 {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotateX(65deg) rotateY(0deg);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotateX(65deg) rotateY(360deg);
+  }
+}
+@keyframes anim_axis2 {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotateX(-75deg) rotateY(0deg);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotateX(-75deg) rotateY(360deg);
+  }
+}
+@keyframes anim_axis3 {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotateX(0deg) rotateZ(50deg) rotateY(-165deg);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotateX(360deg) rotateZ(50deg) rotateY(-165deg);
+  }
+}/*# sourceMappingURL=main.css.map */
