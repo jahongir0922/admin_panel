@@ -13,12 +13,13 @@
   background-color: #1e1e1e;
 }
 .container {
-  width: 80%;
+  // width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   padding: 10px;
+  border: 2px solid red;
   @include media('<=desktop') {
     width: 100%;
   }
@@ -29,8 +30,6 @@
   }
 }
 .card {
-  width: 360px;
-  height: 200px;
   display: flex;
   gap: 15px;
   padding: 25px;
@@ -106,26 +105,34 @@
     color: #babac2;
     font-size: 30px;
   }
-  // > div {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
 }
 .grid_line1 {
   display: grid;
   gap: 1%;
-  // justify-content: space-between;
   width: 100%;
   grid-template-columns: repeat(3, 24% 49% 24%);
+  border: 1px solid red;
+  @include media('<=1550px') {
+    grid-template-columns: repeat(2, 1fr);
+    :last-child {
+      order: -1;
+    }
+  }
 }
 .grid_line2 {
   display: grid;
   gap: 15px;
-  // justify-content: space-between;
   width: 100%;
   grid-template-columns: repeat(4, 24%);
+  @include media('<=1550px') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media('<=1160px') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('<=768px') {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .left_border {
   border-left: 1px solid #333333 !important;
@@ -139,7 +146,6 @@
 }
 ////globus
 .globus {
-  // height: 200px;
   position: relative;
   .g_item {
     color: #20ce70;
