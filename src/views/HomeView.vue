@@ -164,7 +164,6 @@ import { ref } from 'vue'
 const options = ref({
   theme: 'dark1',
   animationEnabled: true,
-  // bacgroundColor: 'none',
   backgroundColor: false,
   title: {},
   axisY: {
