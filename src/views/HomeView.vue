@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="grid_line1">
+    <div class="grid_line">
       <div class="card">
         <img src="../assets/icons/eject.svg" alt="" />
         <div>
@@ -12,11 +12,11 @@
           </div>
         </div>
       </div>
-      <div class="globus_card">
+      <div class="two globus_card">
         <h1>Waxpeer online & status</h1>
         <div class="card2">
           <div>
-            <div class="grid_line3">
+            <div class="grid_line2">
               <div>
                 <span>12698</span>
                 <p>extension</p>
@@ -51,8 +51,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="grid_line2">
       <div class="card">
         <img src="../assets/icons/bitcoin.svg" alt="" />
         <div>

@@ -13,14 +13,13 @@
   background-color: #1e1e1e;
 }
 .container {
-  // width: 1600px;
+  width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   padding: 10px;
-  border: 2px solid red;
-  @include media('<=desktop') {
+  @include media('<=1600px') {
     width: 100%;
   }
   @include media('<=tablet') {
@@ -92,7 +91,9 @@
   padding: 25px;
   align-items: flex-start;
   align-items: center;
-  // background-color: #212121;
+  @include media('<=480px') {
+    grid-template-columns: repeat(2, 1fr);
+  }
   h1 {
     color: #ffffff;
     font-size: 16px;
@@ -104,27 +105,17 @@
   span {
     color: #babac2;
     font-size: 30px;
-  }
-}
-.grid_line1 {
-  display: grid;
-  gap: 1%;
-  width: 100%;
-  grid-template-columns: repeat(3, 24% 49% 24%);
-  border: 1px solid red;
-  @include media('<=1550px') {
-    grid-template-columns: repeat(2, 1fr);
-    :last-child {
-      order: -1;
+    @include media('<=950px') {
+      font-size: 20px;
     }
   }
 }
-.grid_line2 {
+.grid_line {
   display: grid;
   gap: 15px;
   width: 100%;
   grid-template-columns: repeat(4, 24%);
-  @include media('<=1550px') {
+  @include media('<=1366px') {
     grid-template-columns: repeat(3, 1fr);
   }
   @include media('<=1160px') {
@@ -133,16 +124,31 @@
   @include media('<=768px') {
     grid-template-columns: repeat(1, 1fr);
   }
+  .two {
+    grid-column: 2 / 4;
+    @include media('<=1160px') {
+      grid-column: 2 / 3;
+    }
+    @include media('<=768px') {
+      grid-column: 1 / 1;
+    }
+  }
 }
 .left_border {
-  border-left: 1px solid #333333 !important;
+  border-left: 1px solid #333333;
+  @include media('<=480px') {
+    border-left: none;
+  }
 }
-.grid_line3 {
+.grid_line2 {
   display: grid;
-  gap: 1%;
+  gap: 15px;
   width: 100%;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  @include media('<=480px') {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 ////globus
 .globus {
@@ -150,18 +156,29 @@
   .g_item {
     color: #20ce70;
     position: absolute;
+    font-size: 20px;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
+    @include media('<=950px') {
+      font-size: 15px;
+    }
   }
   img {
-    width: 150px;
+    width: 163px;
+    @include media('<=950px') {
+      width: 100px;
+    }
   }
   .axis {
     width: 150px;
     height: 150px;
     border: 1px solid #20ce70;
     border-radius: 50%;
+    @include media('<=950px') {
+      width: 100px;
+      height: 100px;
+    }
   }
   .axis1 {
     transform: translate3d(-50%, -50%, 0) rotateX(65deg) rotateY(55deg);
